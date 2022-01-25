@@ -1,0 +1,145 @@
+.siteFooter {
+    background: #fbfbfb;
+    color: #3a3537;
+
+    .btn--whatsapp {
+        margin-top: 32px;
+        @include lg {
+            padding: 22px 32px 20px 40px;
+            font-size: 17px;
+            &::before {
+                width: 26px;
+                height: 26px;
+            }
+        }
+    }
+}
+.siteFooter__logo {
+    padding: 30px 20px 24px 20px;
+    border-bottom: 1px solid #efefef;
+    @include ms {
+        border-top: 1px solid #efefef;
+    }
+    @include sm {
+        padding: 30px 40px 24px 40px;
+    }
+    @include md {
+        padding: 34px 85px 30px 85px;
+    }
+    img {
+        display: block;
+        height: 32px;
+    }
+    @include lg {
+        padding: 34px 85px 30px 85px;
+        img {
+            height: 40px;
+        }
+    }
+}
+
+.siteFooter__menu {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+
+    padding: 16px 20px 80px 20px;
+    font-size: 18px;
+
+    @include sm {
+        padding: 26px 40px 80px 40px;
+        flex-flow: row nowrap;
+    }
+
+    @include mq(1800) {
+        justify-content: flex-start;
+        .siteFooter__menu__col {
+            margin-right: 100px;
+        }
+    }
+
+    li {
+        display: block;
+        width: 100%;
+        cursor: pointer;
+        .asideNav__menu__item {
+            margin: 16px 0 0;
+            padding: 0;
+            font-size: 1em;
+            &::before {
+                width: 20px;
+                @include lg {
+                    width: 30px;
+                }
+            }
+            &::after {
+                display: none;
+            }
+        }
+    }
+
+    @include md {
+        padding: 14px 32px 100px 85px;
+    }
+    @include lg {
+        font-size: 20px;
+        padding: 14px 65px 100px 85px;
+    }
+    @include mq(1800) {
+        font-size: 23px;
+    }
+}
+
+.siteFooter__menu__item {
+    display: block;
+    margin-top: 28px;
+    cursor: pointer;
+    ul {
+        //display: none;
+        height: 0;
+        overflow: hidden;
+        visibility: hidden;
+
+        li {
+            opacity: 0;
+            transition: all 0.2s 0.2s ease-in;
+        }
+    }
+    &.is-open {
+        &::before {
+            transform: rotate(90deg);
+        }
+        ul {
+            // display: block;
+            height: auto;
+            overflow: visible;
+            li {
+                visibility: visible;
+                opacity: 1;
+                transition: all 0.2s 0.1s ease-out;
+            }
+        }
+    }
+
+    &::before {
+        content: "";
+        display: inline-block;
+        width: 6px;
+        height: 12px;
+        margin-right: 8px;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11.421' height='20.842' viewBox='0 0 11.421 20.842'%3E%3Cg id='terminal' transform='translate(1.414 1.414)'%3E%3Cpath id='Path_853' data-name='Path 853' d='M4,23.013l9.007-9.007L4,5' transform='translate(-4 -5)' fill='none' stroke='%23e51d75' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'/%3E%3C/g%3E%3C/svg%3E%0A");
+        transition: transform 0.2s;
+    }
+
+    @include lg {
+        margin-top: 42px;
+        &::before {
+            width: 9px;
+            height: 18px;
+            margin-right: 10px;
+        }
+    }
+}

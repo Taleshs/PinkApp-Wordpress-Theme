@@ -1,0 +1,26 @@
+$wrapperWidth: 1184px;
+
+$borderTopWidth: 22px;
+$borderTopWidthLg: 29px;
+
+.wrapper {
+    width: 90%;
+    max-width: $wrapperWidth;
+    margin: auto;
+}
+
+body {
+    font-family: Nunito, sans-serif;
+    color: #3a3537;
+}
+
+.siteBody {
+    @include md {
+        display: flex;
+        flex-flow: row nowrap;
+    }
+}
+
+li {
+    list-style-position: inside;
+}

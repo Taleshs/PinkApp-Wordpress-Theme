@@ -1,0 +1,76 @@
+.pageHeading {
+    width: 90%;
+    max-width: 790px;
+    margin: auto;
+    margin: 45px auto 75px auto;
+    text-align: center;
+    strong {
+        color: $pink;
+    }
+    @include ms {
+        padding: 0 24px;
+    }
+    @include xs {
+        text-align: left;
+    }
+
+    @include lg {
+        max-width: 878px;
+        margin: 45px auto 100px auto;
+        .btn {
+            padding: 33px 60px;
+        }
+    }
+}
+
+.pageHeading__title {
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 1.45;
+    color: $pink;
+
+    span {
+        color: $textColor;
+        font-weight: normal;
+    }
+    @include mq(1300) {
+        font-size: 32px;
+    }
+
+    @include lg {
+        font-size: 34px;
+    }
+}
+.pageHeading__text {
+    font-size: 20px;
+    line-height: 1.5;
+    margin-top: 16px;
+    max-width: 610px;
+    margin-left: auto;
+    margin-right: auto;
+    @include mq(1300) {
+        font-size: 24px;
+    }
+    @include lg {
+        font-size: 28px;
+        max-width: 740px;
+    }
+}
+
+.pageHeading__paragraph {
+    font-size: 24px;
+    line-height: 1.45;
+    font-weight: normal;
+    margin-left: auto;
+    margin-right: auto;
+    strong {
+        font-weight: 700;
+        color: $pink;
+    }
+    @include sm {
+        font-size: 25px;
+    }
+    @include lg {
+        font-size: 34px;
+    }
+}

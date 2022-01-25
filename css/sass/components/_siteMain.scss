@@ -1,0 +1,14 @@
+.siteMain {
+    @include md {
+        border-top: $borderTopWidth solid $pink;
+        width: 75%;
+        flex-shrink: 1;
+        flex-grow: 1;
+        margin-left: auto;
+        margin-right: 0;
+    }
+    @include lg {
+        width: 75%;
+        border-top: $borderTopWidthLg solid $pink;
+    }
+}

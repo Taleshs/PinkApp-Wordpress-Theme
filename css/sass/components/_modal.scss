@@ -1,0 +1,93 @@
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.81);
+    z-index: 200;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.4s ease-in;
+    .is-modalOpen & {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+.modal__img {
+    width: 100%;
+    display: block;
+}
+
+.modal__inner {
+    position: relative;
+    width: 90%;
+    max-width: 440px;
+    border-radius: 20px;
+    background: #fff;
+    box-shadow: 0px 6px 30px rgba(28, 28, 28, 0.07);
+
+    transform: translateY(200px);
+    opacity: 0;
+    transition: all 0.2s 0s ease-in;
+
+    .is-modalOpen & {
+        transform: translateY(20px);
+        opacity: 1;
+        transition: all 0.2s 0.3s ease-in;
+    }
+
+    .btn {
+        margin-top: 17px;
+        font-size: 13px;
+        @include sm {
+            font-size: 18px;
+            margin-top: 36px;
+            padding: 22px 26px 19px 26px;
+            &::before {
+                width: 24px;
+                height: 24px;
+                margin-right: 3px;
+            }
+        }
+    }
+}
+.modal__title {
+    font-weight: 900;
+    font-size: 15px;
+    line-height: 1.6;
+    color: $pink;
+    @include sm {
+        font-size: 20px;
+    }
+}
+.modal__text {
+    padding: 32px 36px 45px 36px;
+    @include sm {
+        padding: 42px 52px 70px 52px;
+    }
+    p {
+        margin-top: 12px;
+        font-size: 17px;
+        line-height: 1.6;
+    }
+}
+
+.modal__close {
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    z-index: 10;
+    background-size: contain;
+    background-repeat: center;
+    background-repeat: no-repeat;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='25' height='25' viewBox='0 0 25 25'%3E%3Cg id='Group_2798' data-name='Group 2798' transform='translate(-0.027 0.288)'%3E%3Ccircle id='Ellipse_77' data-name='Ellipse 77' cx='12.5' cy='12.5' r='12.5' transform='translate(0.027 -0.288)' fill='%23f3f3f3'/%3E%3Cg id='Group_2796' data-name='Group 2796' transform='translate(9.252 8.283)'%3E%3Cline id='Line_56' data-name='Line 56' x2='7' y2='7' transform='translate(-0.226 0.429)' fill='none' stroke='%23707070' stroke-linecap='round' stroke-width='2'/%3E%3Cline id='Line_57' data-name='Line 57' x1='7' y2='7' transform='translate(-0.226 0.429)' fill='none' stroke='%23707070' stroke-linecap='round' stroke-width='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");
+}

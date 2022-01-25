@@ -1,0 +1,35 @@
+.pageTitle {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    height: 102px;
+    color: $pink;
+    background: #f4f4f4;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 18px;
+    padding-left: 24px;
+    padding-right: 24px;
+    @include sm {
+        font-size: 19px;
+    }
+    @include ms {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+    .pageTitle__text {
+        font-size: 1em;
+        font-weight: 800;
+    }
+    @include md {
+        height: 82px;
+    }
+    @include lg {
+        height: 105px;
+        font-size: 22px;
+    }
+    @include mq(1800) {
+        font-size: 25px;
+    }
+}
