@@ -1,4 +1,0 @@
-[19-Jan-2022 03:06:16 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/mk0k9whnjglm/public_html/pinkapp.com/wp-content/themes/heypink/index.php:1
-Stack trace:
-#0 {main}
-  thrown in /home/mk0k9whnjglm/public_html/pinkapp.com/wp-content/themes/heypink/index.php on line 1

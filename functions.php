@@ -47,15 +47,6 @@
     }
     add_action( 'after_setup_theme', 'wpdocs_after_setup_theme' );
 
-    // // REGISTRO DE MENU WORDPRESS
-    // register_nav_menus( array(
-    //     'menu_somos' => 'Somos a sua melhor solução',
-    //     'menu_dores' => 'Entendemos suas dores com:',
-    //     'menu_solucoes' => 'Nossas soluções para:',
-    //     'menu_planos' => 'Planos',
-    // ) );
-
-
 
     if( function_exists('acf_add_options_page') ) {
     

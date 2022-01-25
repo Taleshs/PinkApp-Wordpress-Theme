@@ -1,6 +1,8 @@
-<?php get_header();/*
+<?php get_header();
+	/*
         Template Name: Template 04
-    */?>
+    */
+?>
    	<main class="siteMain">
 	    <div class="pageTitle">
 	        <h2 class="pageTitle__text"><?php the_field( 'chamada_header' ); ?></h2>
@@ -47,7 +49,6 @@
 		                </td>
 		                <?php endwhile; ?>
 					<?php endif; ?>
-	               
 	            </tr>
 	            <tr>
 	                <td class="priceTable__prices">
@@ -412,14 +413,14 @@
 	    </div>
 
 	    <div class="siteFooter">
-                    <div class="siteFooter__logo">
-                        <a href="index.html">
-                            <img src="<?php echo get_template_directory_uri();?>/images/logoFull.svg" alt="Pink" />
-                        </a>
-                    </div>
+			<div class="siteFooter__logo">
+				<a href="index.html">
+					<img src="<?php echo get_template_directory_uri();?>/images/logoFull.svg" alt="Pink" />
+				</a>
+			</div>
 
-                    <?php get_template_part('inc/rodape');?>
-                </div>
-            </main>
+			<?php get_template_part('inc/rodape');?>
+		</div>
+	</main>
 
 <?php get_footer();?>
